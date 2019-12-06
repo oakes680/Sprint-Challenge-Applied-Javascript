@@ -15,7 +15,7 @@ function Header() {
     const span1 = document.createElement('span')
     span1.classList.add('date')
     span1.textContent = 'SMARCH 28, 2019'
-    const h1 = document.createElement('span')
+    const h1 = document.createElement('h1')
     h1.textContent = 'Lambda Times'
     const span2 = document.createElement('span')
     span2.classList.add('temp')
@@ -30,4 +30,4 @@ function Header() {
 
 const head = document.querySelector('.header-container')
 
-head.appendChild(Header(head))
+head.appendChild(Header())

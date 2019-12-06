@@ -22,6 +22,14 @@
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then(response => {
         console.log(response.data.articles)
+        let articlesObject = response.data.articles
+        for(let prop in articlesObject) {
+            articlesObject[prop].forEach((x) => {
+                let cardInfo = cardCreator(x.headline, x.authorPhoto, x.authorName)
+
+                console.log(cardContainer.appendChild(cardInfo))
+            })
+        }
     })
 
 
@@ -33,14 +41,14 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 const cardContainer = document.querySelector('.cards-container')
 
 function cardCreator(headline, urlAuthor, authorsName) {
-    const divCard = documnet.createElement('div')
+    const divCard = document.createElement('div')
     divCard.classList.add('card')
-    const divHead = documnet.createElement('div')
+    const divHead = document.createElement('div')
     divHead.classList.add('headline')
     divHead.textContent = headline
-    const divAuthor = documnet.createElement('div')
+    const divAuthor = document.createElement('div')
     divAuthor.classList.add('author')
-    const divImg = documnet.createElement('div')
+    const divImg = document.createElement('div')
     divImg.classList.add('img-container')
     const imageA = document.createElement('img')
     imageA.src = urlAuthor
