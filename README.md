@@ -30,9 +30,14 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The Document Object Model, or the “DOM”, is an interface to web pages. It is essentially an API to the page, allowing programs to read and manipulate the page’s content, structure, and styles.
+
+
 2. What is an event?
+HTML events are "things" that happen to HTML elements.   For example 'click'
 
 3. What is an event listener?
+An event listener is a procedure or function in a computer program that waits for an event to occur.   
 
 4. Why would we convert a NodeList into an Array?  The DOM method document.querySelectorAll() (and a few others) return a NodeList.
 

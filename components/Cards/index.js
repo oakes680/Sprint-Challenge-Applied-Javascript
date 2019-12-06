@@ -19,23 +19,43 @@
 // Create a card for each of the articles and add the card to the DOM.
 
 
-axios.get('https://lambda-times-backend.herokuapp.com/articles')
+// axios.get('https://lambda-times-backend.herokuapp.com/articles')
+//     .then(response => {
+//         console.log(response.data.articles)
+//         let articlesObject = response.data.articles
+//         for(let prop in articlesObject) {
+//             articlesObject[prop].forEach((x) => {
+//                 let cardInfo = cardCreator(x.headline, x.authorPhoto, x.authorName)
+
+//                 console.log(cardContainer.appendChild(cardInfo))
+//             })
+//         }
+//     })
+
+
+
+
+    axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then(response => {
-        console.log(response.data.articles)
-        let articlesObject = response.data.articles
+        // //console.log(response.data.articles)
+         let articlesObject = response.data.articles
+        // let aaa = Object.values(articlesObject)
+        // console.log(aaa)
+        // aaa.forEach((x, index) => {
+        //     console.log(x[2].headline)
+        //     let card2 = cardCreator(x[index].headline, x[index].authorPhoto, x[index].authorName)
+
+        //     cardContainer.appendChild(card2)
+        // })
+
         for(let prop in articlesObject) {
             articlesObject[prop].forEach((x) => {
                 let cardInfo = cardCreator(x.headline, x.authorPhoto, x.authorName)
 
-                console.log(cardContainer.appendChild(cardInfo))
+                cardContainer.appendChild(cardInfo)
             })
         }
     })
-
-
-
-
-
 
 
 const cardContainer = document.querySelector('.cards-container')
