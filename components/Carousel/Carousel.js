@@ -17,3 +17,39 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+
+function carouselCreator() {
+  const divCarousel = document.createElement('div')
+  divCarousel.classList.add('carousel')
+  const divLeftB = document.createElement('div')
+  divLeftB.classList.add('left-button')
+  const imgMountain = document.createElement('img')
+  imgMountain.src = "./assets/carousel/mountains.jpeg"
+  const imgComputer = document.createElement('img')
+  imgComputer.src = "./assets/carousel/computer.jpeg"
+  const imgTrees = document.createElement('img')
+  imgTrees.src = "./assets/carousel/trees.jpeg"
+  const imgTurnTable = document.createElement('img')
+  imgTurnTable.src = "./assets/carousel/turntable.jpeg"
+  const divRightB = document.createElement('div')
+  divRightB.classList.add('right-button')
+
+  divCarousel.appendChild(divLeftB)
+  divCarousel.appendChild(imgMountain)
+  divCarousel.appendChild(imgComputer)
+  divCarousel.appendChild(imgTrees)
+  divCarousel.appendChild(imgTurnTable)
+  divCarousel.appendChild(divRightB)
+
+  divLeftB.addEventListener('click', () => {
+    divCarousel.classList.toggle('none')
+  })
+
+  return divCarousel
+}
+
+let spot = document.querySelector('.carousel-container')
+spot.appendChild(carouselCreator())
+
+
