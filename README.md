@@ -34,7 +34,9 @@ Edit this document to include your answers after each question. Make sure to lea
 
 3. What is an event listener?
 
-4. Why would we convert a NodeList into an Array?
+4. Why would we convert a NodeList into an Array?  The DOM method document.querySelectorAll() (and a few others) return a NodeList.
+
+To operate on the list, e.g. using forEach(), the NodeList must first be converted to an Array.
 
 5. What is a component?
 
