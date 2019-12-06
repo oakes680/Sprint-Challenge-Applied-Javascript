@@ -44,6 +44,7 @@ An event listener is a procedure or function in a computer program that waits fo
 To operate on the list, e.g. using forEach(), the NodeList must first be converted to an Array.
 
 5. What is a component?
+A piece of reusuable code.
 
 ### Git Set up
 
